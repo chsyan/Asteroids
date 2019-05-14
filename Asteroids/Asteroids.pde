@@ -50,7 +50,7 @@ boolean shipDead;
 // Screenshake
 float sMag, camOff;
 float trauma, screenShake;
-final float SMAGT = 10;
+final float SMAGT = 1;
 
 // New level
 int level, levelAlpha;

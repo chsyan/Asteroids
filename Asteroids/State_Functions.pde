@@ -254,6 +254,8 @@ void setting() {
 void play() {
   background(0);
 
+  pushMatrix();
+  screenShake();
   int count = 0;
   for (int i=gameObjects.size()-1; i>=0; i--) {
     GameObject obj = gameObjects.get(i);
@@ -274,8 +276,8 @@ void play() {
   }
 
   player.move(pressed, upKey, downKey, leftKey, rightKey, spaceKey);
+  popMatrix();
 
-  screenShake();
   Ui();
   checkOver();
 }

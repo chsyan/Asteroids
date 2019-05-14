@@ -38,6 +38,14 @@ void screenShake() {
     sMag = 0;
     trauma = 0;
   }
+
+  camOff += 0.5;
+  //PVector shakeAmount = PVector.random2D();
+  PVector shakeAmount = new PVector(noise(camOff), noise(1+camOff)).mult(random(-1, 1));
+  float roll = radians(1) * sMag * noise(2+camOff) * random(-1, 1);
+  shakeAmount.mult(sMag);
+  translate(shakeAmount.x, shakeAmount.y);
+  rotate(roll);
 }
 
 void Ui() {

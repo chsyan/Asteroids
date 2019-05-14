@@ -4,7 +4,7 @@ void keyPressed(KeyEvent e) {
   else pressed[key] = true;
 
 
-  println(String.valueOf(Character.getName(keyCode)));
+  //println(String.valueOf(Character.getName(keyCode)));
 }
 
 void keyReleased() {
